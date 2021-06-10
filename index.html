@@ -282,14 +282,9 @@
                                             <div className="col-lg-6" key={k}>
                                                 <div className="tools_expert">
                                                     <div className="skill_main">
-                                                    {item.map((value) => (
-                                                        <div className="skill_item" key={value.id}>
-                                                            <h4>{value.name + " "} <span className="counter">{value.point}</span>%</h4>
-                                                            <div className="progress_br">
-                                                                <div className="progress">
-                                                                    <div className="progress-bar" role="progressbar" aria-valuenow={value.point} aria-valuemin="0" aria-valuemax="100" style={{ width: value.point + '%' }}></div>
-                                                                </div>
-                                                            </div>
+                                                    {item.map((value, index) => (
+                                                        <div className="skill_item" key={index}>
+                                                            <h3>{value}</h3>
                                                         </div>
                                                     ))}    
                                                     </div>
